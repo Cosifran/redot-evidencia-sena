@@ -65,12 +65,11 @@ export default function CreatePage() {
         <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
             <div>
                 <h1  className="text-2xl">
-                Name your new course
+               Nombre de tu curso nuevo
                 </h1>
 
                 <p className="text-sm text-slate-600">
-                    What would you like to name your course? Don&apos;t worry, you 
-                    can change this later.
+                    Elige un nombre que sea descriptivo para tu curso. (No se pueden editar después) 
                 </p>
                 <Form { ...form } >
                     <form 
@@ -83,17 +82,17 @@ export default function CreatePage() {
                             render={({field }) => (
                                 <FormItem>
                                     <FormLabel>
-                                        Course Title
+                                       Titulo del curso
                                     </FormLabel>
                                     <FormControl>
                                         <Input
                                             disabled={isSubmitting}
-                                            placeholder="e.g. 'Advanced web development'"
+                                            placeholder="e.g. 'Desarrollo de aplicaciones con Next.js'"
                                             { ...field } 
                                         />
                                     </FormControl>
                                     <FormDescription>
-                                        What will you teach in this course? 
+                                        ¿Qué vas enseñar en este curso?
                                     </FormDescription>
                                     <FormMessage />
 
@@ -107,14 +106,14 @@ export default function CreatePage() {
                                     variant="ghost"
                                     type="button"
                                 >
-                                    Cancel
+                                    Cancelar
                                 </Button>
                             </Link>
                             <Button
                                 type="submit"
                                 disabled={!isValid || isSubmitting}
                             >
-                                Continue
+                                Continuar
                             </Button>
                         </div>
 

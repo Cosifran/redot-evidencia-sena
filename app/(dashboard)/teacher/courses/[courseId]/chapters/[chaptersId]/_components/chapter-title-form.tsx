@@ -76,14 +76,14 @@ export const ChapterTitleForm = ({
   return (
     <div className="mt-6 bg-slate-100 rounded-md p-4 dark:bg-gray-800">
       <div className="font-medium flex items-center justify-between">
-        Course Title
+        Titulo del capitulo
         <Button onClick={toggleEdit} variant="ghost">
           {isEditing ? (
-            <>Cancel</>
+            <>Cancelar</>
           ) : (
             <>
               <Pencil className="h-4 w-4 mr-2" />
-              Edit title
+              Editar titulo
             </>
           )}
         </Button>

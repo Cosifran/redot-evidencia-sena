@@ -38,33 +38,33 @@ export const ChapterVideoForm = ({
     try {
       const result = formSchema.parse(values)
       await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}`, result);
-      toast.success("Chapter updated");
+      toast.success("Capitulo actualizado");
       toggleEdit();
       router.refresh();
 
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Algo salió mal");
     }
   }
 
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4  dark:bg-gray-800 dark:text-slate-300">
       <div className="font-medium flex items-center justify-between">
-        Chapter video
+       Video del capitulo
         <Button onClick={toggleEdit} variant="ghost">
           {isEditing && (
-            <>Cancel</>
+            <>Cancelar</>
           )}
           {!isEditing && !initialData.videoUrl && (
             <>
               <PlusCircle className="h-4 w-4 mr-2" />
-              Add a video
+              Agregar video
             </>
           )}
           {!isEditing && initialData.videoUrl && (
             <>
               <Pencil className="h-4 w-4 mr-2" />
-              Edit video
+              Editar video
             </>
           )}
         </Button>

@@ -49,12 +49,19 @@ export const getDashboardCourses = async (
       course["progress"] = progress;
     }
 
+    console.log("GET_DASHBOARD_COURSES", courses);
+
     // Handle completed and couress in progress
     const completedCourses = courses.filter(
       (course) => course.progress === 100
     );
     // Handle null progress
-    const coursesInProgress = courses.filter((course) => course.progress ?? 0);
+    const coursesInProgress = courses.filter((course) => {
+      if (course.progress === null) {
+        return;
+      }
+      return course.progress > 0 && course.progress < 100;
+    });
 
     return {
       completedCourses,

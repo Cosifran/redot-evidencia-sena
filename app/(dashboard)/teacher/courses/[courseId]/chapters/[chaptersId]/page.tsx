@@ -111,7 +111,7 @@ const ChapterIdPage: React.FC<ChapterIdPageProps> = async ({ params }) => {
           <div className="space-y-4">
             <div className="flex items-center gap-x-2">
               <IconBadge icon={Video} />
-              <h2 className="text-xl font-medium">Add a video</h2>
+              <h2 className="text-xl font-medium">Añade un video</h2>
             </div>
             <ChapterVideoForm
               initialData={chapter}
